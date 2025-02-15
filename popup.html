@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Productivity & Ad Blocker & Smart Notes & Tab Manager</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <script src="popup.js"></script>
+</head>
+<body>
+    
+    <div id="menuSection">
+        <button data-target="adBlockerSection">Ad Blocker</button>
+        <button data-target="productivitySection">Productivity Tracker</button>
+        <button data-target="smartNoteSection">Smart Notes</button>
+        <button data-target="tabManagerSection">Tab Manager</button>
+    </div>
+    <div class="content">
+        <div id="adBlockerSection" class="section">
+            <h2>Ad Blocker</h2>
+            <label>
+                <input type="checkbox" id="toggleAdBlock"> Enable Ad Blocker
+            </label>
+            <hr>
+            <h3>Custom Filters</h3>
+            <input type="text" id="customFilterInput" placeholder="Enter CSS Selector">
+            <button id="addFilterBtn">Add</button>
+            <ul id="customFilterList"></ul>
+            <hr>
+            <p>Blocked Ads: <span id="blockedAdsCount">0</span></p>
+        </div>
+        
+        <div id="productivitySection" class="section">
+            <h2>Time Spent Per Website</h2>
+            <table id="statsTable">
+                <tr>
+                    <th>Website</th>
+                    <th>Time Spent (min)</th>
+                </tr>
+            </table>
+            <hr>
+            <h3>Set Daily Limit</h3>
+            <input type="number" id="dailyLimit" placeholder="Minutes">
+            <button id="setLimit">Set</button>
+            <hr>
+            <button id="resetData">Reset Data</button>         
+        </div>
+        <div id="smartNoteSection" class="section">
+            <h2>Smart Notes</h2>
+
+    <h3>Local Notes (This Page)</h3>
+    <table id="localNotesTable">
+        <thead>
+            <tr>
+                <th>Note</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <textarea id="localNote"></textarea>
+    <button id="saveLocal">Save Local Note</button>
+
+    <hr>
+
+    <h3>Global Notes (Accessible Anywhere)</h3>
+    <table id="globalNotesTable">
+        <thead>
+            <tr>
+                <th>Note</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <textarea id="globalNote"></textarea>
+    <button id="addGlobal">Add Global Note</button>
+        
+        
+        </div>
+        <div id="tabManagerSection" class="section">
+            <h2>Tab Manager</h2>
+
+    <button id="groupTabs">Group Tabs</button>
+    <hr>
+
+    <h3>Grouped Tabs</h3>
+    <table id="groupedTabsTable">
+        <thead>
+            <tr>
+                <th>Group Name</th>
+                <th>Tabs Count</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <hr>  
+
+    <h3>Session Management</h3>
+    <button id="saveSession">Save Session</button>
+    <button id="restoreSession">Restore Session</button>
+        </div>
+        
+       
+        
+    </div>
+</body>
+</html>
