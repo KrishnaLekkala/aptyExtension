@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Custom Ad Blocker",
+    "name": "aptyExtension",
     "version": "1.0",
     "description": "Block ads with custom filters",
    "permissions": ["storage", "declarativeNetRequest", "declarativeNetRequestWithHostAccess","sessions","activeTab","scripting","tabs"],
